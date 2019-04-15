@@ -1,18 +1,30 @@
-.w3-container a {
-    color: #337ab7;
-    text-decoration: none;
+head, body {
+    margin: 0;
 }
 
-pre {
-    text-align: left;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #343f5f;
-    color: #fdfeff;
-    overflow: scroll;
-    border: 1px #929090 solid;
-    padding: 15px
+.navigation-list {
+    padding: 4px;
+    margin: 0;
+    background: #007336;
 }
 
-.w3-card-4 {
-    padding: 15px;
+.navigation-bar {
+    display: block;
+    background: white;
+    border-bottom: 2px solid black;
+}
+
+.navigation-list-item {
+    list-style: none;
+    display: inline-block;
+    padding: 8px;    
+}
+
+.navigation-link {
+    text-decoration:  none;
+    color: white;
+}
+
+.demo-panel img {
+    width: 100%;
 }
