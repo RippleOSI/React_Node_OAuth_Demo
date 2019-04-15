@@ -1,3 +1,13 @@
+head, body {
+    margin: 0;
+}
+
+.navigation-list {
+    padding: 4px;
+    margin: 0;
+    background: #007336;
+}
+
 .navigation-bar {
     display: block;
     background: white;
@@ -7,12 +17,12 @@
 .navigation-list-item {
     list-style: none;
     display: inline-block;
-    padding: 8px;
+    padding: 8px;    
 }
 
 .navigation-link {
     text-decoration:  none;
-    color: blue;    
+    color: white;
 }
 
 .demo-panel img {
