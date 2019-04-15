@@ -1,12 +1,12 @@
 import React, { Component} from 'react'
 import user from '../auth/user';
-import { Administrator, HealthcareWorker, Patient } from '../auth/roles';
+import { Administrator, HealthcareWorker, Patient, LoggedIn } from '../auth/roles';
 import { Link } from 'react-router-dom';
 
 const routes = [
   { 
     text: 'Home',
-    link: '/',
+    link: '/'
   },
   { 
     text: 'Business Intelligence',
@@ -22,7 +22,7 @@ const routes = [
     text: 'Single Patient',
     link: '/single-patient',
     authorisation: Patient
-  }
+  },  
 ]
 
 
@@ -36,6 +36,12 @@ class NavigationBar extends Component {
               <NavigationLink route={r} key={index}/>
             ))
           }
+          <li className="navigation-list-item">
+            <a className="navigation-link" href="/logout">
+              Logout
+            </a>
+          </li>
+          
         </ul>
       </div>
     )
