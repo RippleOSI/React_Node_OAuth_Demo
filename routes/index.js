@@ -14,7 +14,7 @@ router.get('/business-intelligence', secured(rules.AuthorizeAdministrator()), fu
 });
 
 router.get('/multi-patient', secured(rules.AuthorizeHealthcare()), function (req, res, next) {
-  res.render('multi', env.getViewData(req));
+  res.render('index', env.getViewData(req));
 });
 
 router.get('/single-patient', secured(rules.AuthorizePatient()), function (req, res, next) {
