@@ -6,7 +6,9 @@ class Dashboard extends Component {
   render() {
     return (
       <Layout>
-        Multi Patient
+        <div className="demo-panel">
+          <img src="/images/multi-patient-view.png" />
+        </div>
       </Layout>
     )
   }

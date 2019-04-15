@@ -6,7 +6,9 @@ class Dashboard extends Component {
   render() {
     return (
       <Layout>
-        Business Intelligence
+        <div className="demo-panel">
+          <img src="/images/business-intelligence-view.png" />
+        </div>
       </Layout>
     )
   }
