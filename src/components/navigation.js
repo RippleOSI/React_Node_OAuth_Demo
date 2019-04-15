@@ -1,6 +1,7 @@
 import React, { Component} from 'react'
 import user from '../auth/user';
 import { Administrator, HealthcareWorker, Patient } from '../auth/roles';
+import { Link } from 'react-router-dom';
 
 const routes = [
   { 
@@ -28,22 +29,24 @@ const routes = [
 class NavigationBar extends Component {
   render() {
     return (
-      <ul>
-        {
-          routes.filter((r) => user.isAuthorised(r.authorisation)).map((r) => (
-            <NavigationLink route={r} />
-          ))
-        }
-      </ul>
+      <div className="navigation-bar">
+        <ul className="navigation-list">
+          {
+            routes.filter((r) => user.isAuthorised(r.authorisation)).map((r, index) => (
+              <NavigationLink route={r} key={index}/>
+            ))
+          }
+        </ul>
+      </div>
     )
   }
 }
 
 const NavigationLink = ({route}) => (
-  <li className="navigation-link">
-    <a href={route.link}>
+  <li className="navigation-list-item">
+    <Link className="navigation-link" to={route.link}>
       {route.text}
-    </a>
+    </Link>
   </li>
 );
 
